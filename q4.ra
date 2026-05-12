@@ -7,3 +7,11 @@
 */
 
 // TODO
+\sqlexec_{select distinct b1.cname as name1, b2.cname as name2
+from borrower b1
+join borrower b2 on b1.lno = b2.lno and b1.cname < b2.cname
+order by name1, name2};
+
+
+
+
