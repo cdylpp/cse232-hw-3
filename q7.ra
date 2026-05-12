@@ -2,5 +2,6 @@
 
 // DONE!
 
-\project_{no, type, minCredit, amount}
+\rename_{loanNo}
+\project_{no}
     (loan \join_{amount = maxAmount} \rename_{maxAmount} \aggr_{max(amount)} loan);
