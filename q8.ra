@@ -2,4 +2,4 @@
 // The output should be a table with a "borrowedAmount" column.
 
 // DONE!
-\rename_{borrowedAmount} (\aggr_{sum(amount)} (loan \join_{no = lno} (\select_{cname = 'John Smith'} borrower)));
+\rename_{borrowedAmount} (\aggr_{coalesce(sum(amount),0)} (loan \join_{no = lno} (\select_{cname = 'John Smith'} borrower)));
