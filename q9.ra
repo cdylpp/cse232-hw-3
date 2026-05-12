@@ -1,11 +1,14 @@
 // Among the loans taken by a borrower named "John Smith", find those with highest minCredit requirement
 // (note that multiple loans taken by John could be tied for the highest minCredit). If John took out no 
 // loans, the result is empty.
+// The output should be a table with a "loanNo" column.
 
-// TODO
+// DONE!
 
-\select_{minCredit >= }
-\rename_{loansToJohn:*} (loan \join_{no = lno} (\select_{cname = 'John Smith'} borrower))
-
-
-
+\rename_{loanNo}
+\project_{no}(
+    (\rename_{loansToJohn:*} (loan \join_{no = lno} (\select_{cname = 'Alice'} borrower)))
+    \join_{amount = maxOfJohns}
+    (\rename_{maxOfJohns} 
+    \aggr_{max(amount)}
+    \rename_{loansToJohn:*} (loan \join_{no = lno} (\select_{cname = 'Alice'} borrower))));
