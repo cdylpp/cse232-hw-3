@@ -4,14 +4,11 @@
 
 // DONE!
 \rename_{name}
-(\project_{cname} 
-    (\select_{type='jumbo mortgage'}
-        (borrower \join_{lno = no} loan)
-) 
-    \union
-    (
-        \project_{name} 
-        (\select_{credit >= 750} customer)
-    ));
+\project_{cname} 
+    \select_{type='jumbo mortgage'} (borrower \join_{lno = no} loan)
+\union
+    \project_{name} \select_{credit >= 750} customer;
+
+
 
 
