@@ -1,7 +1,2 @@
-// Find the names of customers who took out a “jumbo mortgage” loan (a loan of type "jumbo mortgage"). 
-// The output should be a table with a "name" column.
-
-
-// DONE!
 \rename_{name} \project_{cname} \select_{type='jumbo mortgage'} (loan \join_{no = lno} borrower);
 

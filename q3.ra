@@ -1,7 +1,4 @@
-// Find the names of customers who took out a “jumbo mortgage” loan and a “student” loan.
-// The output should be a table with a "name" column.
 
-// DONE!
 \rename_{name}
 (\project_{cname} \select_{type='jumbo mortgage'} (borrower \join_{lno = no} loan)
 \intersect
