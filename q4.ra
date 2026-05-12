@@ -1,0 +1,9 @@
+/* 
+* Find pairs of names of customers who share the same loan. Avoid listing a customer with
+* herself (e.g. do not list (Jane,Jane)). Also avoid repeating pairs which are equal modulo swapping the
+* components (e.g. do not list both (John,Jane) and (Jane,John) - list only (Jane,John) once). 
+* Sort the output pairs by the first name, then by the second. 
+* The output should be a table with a "name1" and a "name2" column.
+*/
+
+// TODO

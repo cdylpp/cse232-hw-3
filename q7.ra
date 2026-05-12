@@ -1,0 +1,6 @@
+// Find the loans with the maximal amount (there may be multiple tied loans, output all of them).
+
+// DONE!
+
+\project_{no, type, minCredit, amount}
+    (loan \join_{amount = maxAmount} \rename_{maxAmount} \aggr_{max(amount)} loan);

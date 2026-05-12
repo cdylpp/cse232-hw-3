@@ -1,0 +1,8 @@
+// Find the customers who borrowed a total of at least 13000. 
+// The output should be a table with a "name" column.
+
+// DONE!
+\project_{name}
+    \select_{totalAmount >= 13000} 
+    \rename_{name, totalAmount} 
+        \aggr_{cname:sum(amount)} loan \join_{no = lno} borrower;

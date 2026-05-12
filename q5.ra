@@ -1,0 +1,8 @@
+// Find the loan numbers ("no") shared by at least two different customers.
+// The output should be a table with a "loanNo" column.
+
+// DONE!
+
+\project_{loanNo}
+\select_{numOfLoans > 1}
+\rename_{loanNo, numOfLoans} \aggr_{no:count(no)} loan \join_{no = lno} borrower;

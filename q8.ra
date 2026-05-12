@@ -1,0 +1,7 @@
+// Find the total amount borrowed by "John Smith". If he took out no loans, then output 0. 
+// The output should be a table with a "borrowedAmount" column.
+
+
+
+// DONE!
+\rename_{borrowedAmount} (\aggr_{sum(amount)} (loan \join_{no = lno} (\select_{cname = 'John Smith'} borrower)));
