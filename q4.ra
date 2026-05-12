@@ -6,12 +6,11 @@
 * The output should be a table with a "name1" and a "name2" column.
 */
 
-// TODO
-\sqlexec_{select distinct b1.cname as name1, b2.cname as name2
-from borrower b1
-join borrower b2 on b1.lno = b2.lno and b1.cname < b2.cname
-order by name1, name2};
+// DONE!
 
-
+\rename_{name1, name2}
+    \project_{b1.cname, b2.cname}
+        \select_{b1.lno = b2.lno and b1.cname < b2.cname}
+            ((\rename_{b1:*} borrower) \cross (\rename_{b2:*} borrower));
 
 
