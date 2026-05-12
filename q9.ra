@@ -7,8 +7,8 @@
 
 \rename_{loanNo}
 \project_{no}(
-    (\rename_{loansToJohn:*} (loan \join_{no = lno} (\select_{cname = 'John Smith'} borrower)))
-    \join_{amount = maxOfJohns}
-    (\rename_{maxOfJohns} 
-    \aggr_{max(amount)}
-    \rename_{loansToJohn:*} (loan \join_{no = lno} (\select_{cname = 'John Smith'} borrower))));
+    (loan \join_{no = lno} (\select_{cname = 'John Smith'} borrower))
+    \join_{minCredit = maxMinCredit}
+    (\rename_{maxMinCredit}
+        \aggr_{max(minCredit)}
+            (loan \join_{no = lno} (\select_{cname = 'John Smith'} borrower))));
