@@ -3,7 +3,7 @@
 
 // DONE!
 \rename_{name}
-\project_{cname} \select_{type='jumbo mortgage'} (borrower \join_{lno = no} loan)
+(\project_{cname} \select_{type='jumbo mortgage'} (borrower \join_{lno = no} loan)
 \intersect
-\project_{cname} \select_{type='student'} (borrower \join_{lno = no} loan);
+\project_{cname} \select_{type='student'} (borrower \join_{lno = no} loan));
 
